@@ -1,0 +1,75 @@
+body{
+    font-family:Arial;
+    background:#111;
+    color:white;
+    text-align:center;
+    margin:0;
+}
+
+/* top menu */
+.topmenu{
+    display:flex;
+    justify-content:center;
+    gap:40px;
+    background:#222;
+    padding:20px;
+}
+
+.menu-btn{
+    background:#333;
+    color:white;
+    text-decoration:none;
+    padding:20px 40px;
+    font-size:26px;
+    border-radius:10px;
+    transition:0.2s;
+}
+
+.menu-btn:hover{
+    background:#2ecc71;
+}
+
+main{
+    margin-top:40px;
+}
+
+/* dance grid */
+.dance-grid{
+    display:flex;
+    justify-content:center;
+    gap:60px;
+    margin-top:40px;
+}
+
+.dance{
+    background:#333;
+    border-radius:15px;
+    padding:50px;
+    font-size:70px;
+    width:160px;
+    cursor:pointer;
+}
+
+.locked{
+    background:#222;
+    color:#777;
+}
+
+.unlocked{
+    background:#2ecc71;
+}
+
+/* movement log */
+#log{
+    background:#222;
+    width:90%;
+    max-width:600px;
+    padding:15px;
+    height:200px;          /* fixed height */
+    text-align:left;
+    border-radius:10px;
+    overflow-y:auto;       /* scroll inside box */
+    margin:20px auto;      /* center horizontally */
+    display:block;         /* normal block layout */
+    /* REMOVE flex-direction: column-reverse */
+}
