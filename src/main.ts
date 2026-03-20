@@ -7,7 +7,7 @@ import {
 
 import { MicrobitBluetoothDevice, Microbit } from "microbyte";
 import MyHandler from "./microbitHandler";
-import hexContent from "./microbit-ML_test.hex?raw";
+import hexContent from "./ml_bluetooth.hex?raw";
 
 const microbit = new Microbit();
 const microbitBluetooth = new MicrobitBluetoothDevice();
@@ -38,7 +38,7 @@ async function flashMicrobit() {
       createUniversalHexFlashDataSource(hexContent),
       {
         partial: true,
-        progress: (p: number | undefined) => { statusEl.textContent = `Flashing: ${p ?? 0}%`; console.log(p) }
+        progress: (p: number | undefined) => { statusEl.textContent = `Flashing: ${p ?? 0 * 100}%`; console.log(p) }
       }
     );
     console.log("Flashed!");
